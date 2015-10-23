@@ -1,0 +1,35 @@
+<div class="jumbotron text-center">
+    <h1>Nerds com Orgulho!</h1>
+
+    <p>{{ tagline }}</p>
+
+    <div id="nerd-list" class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+
+            <!-- LOOP OVER THE TODOS IN $scope.todos -->
+            <div class="checkbox" ng-repeat="nerd in nerds">
+                <label>
+                    <input type="checkbox" ng-click="deleteNerd(nerd._id)"> {{ nerd.name }}
+                </label>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="nerd-form" class="row">
+        <div class="col-sm-8 col-sm-offset-2 text-center">
+            <form>
+                <div class="form-group">
+
+                    <!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
+                    <input type="text" class="form-control input-lg text-center" placeholder="Luke I'm your father!" ng-model="formData.name">
+                    <input type="text" class="form-control input-lg text-center" placeholder="I am not a noob!" ng-model="formData.level">
+                </div>
+
+                <!-- createToDo() WILL CREATE NEW TODOS -->
+                <button type="submit" class="btn btn-primary btn-lg" ng-click="createNerd()">Incluir Nerd</button>
+            </form>
+        </div>
+    </div>
+
+</div>
