@@ -1,3 +1,3 @@
 angular.module('MainCtrl', []).controller('MainController', function($scope) {
-	$scope.tagline = 'Para a lua e de volta!';
+	$scope.tagline = 'Para a lua e de volta, bem simples!';
 });
